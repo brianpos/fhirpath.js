@@ -10,11 +10,17 @@ const resourceJsonString = fs.readFileSync(__dirname + '/resources/r4/resource-e
 describe('Converter base test', () => {
   it('Convert a simple tests from XML to YAML', async () => {
     const data = await convert.testsXmlStringToYamlString(testXmlString, 'r4');
-    expect(data).toEqual(testYamlString);
+    // "localize" the data for the test to correctly respect the \r\n processing of the platform
+    // windows puts in \r\n where mac only does \n (both are compliant)
+    expect(data).toEqual(testYamlString.replace(/\r/g, ''));
   });
 
   it('Convert a simple resource from XML to JSON', async () => {
     const data = await convert.resourceXmlStringToJsonString(resourceXmlString);
-    expect(data.trim()).toEqual(resourceJsonString.trim());
+    // "localize" the data for the test to correctly respect the \r\n processing of the platform
+    // windows puts in \r\n where mac only does \n (both are compliant)
+    const localJson = JSON.stringify(JSON.parse(resourceJsonString), null, '  ').replace(/\\r/g, '');
+    const localData = data.replace(/\\r/g, '');
+    expect(localData).toEqual(localJson);
   });
 });
