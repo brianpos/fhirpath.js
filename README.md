@@ -446,9 +446,13 @@ using the package).
 
 If you need to regenerate the parser from the ANTLR4 grammar (which is in
 parser/FHIRPath.g4), first download the
-ANTLR4 library from http://www.antlr.org/download/antlr-4.7.1-complete.jar into
+ANTLR4 library from http://www.antlr.org/download/antlr-4.13.2-complete.jar into
 the root of the project directory, and then run "npm run generateParser".
 
+### Typescript port
+This branch contains a Typescript version of the engine.
+It passes all unit tests.
+To switch to test the javascript version, comment out the line in jest.config.js
 
 ### Building the demo page
 
@@ -495,7 +499,7 @@ open browser on localhost:8080
   ```
 
 ## Credits
-This implemention of the FHIRPath specification was developed as a joint project
+This implementation of the FHIRPath specification was developed as a joint project
 between the U.S. National Library of Medicine (NLM) and Health Samurai, and was
 then donated to HL7.  Current maintenance and additional development is being
 performed by NLM, but we welcome contributions from others.  (For anything

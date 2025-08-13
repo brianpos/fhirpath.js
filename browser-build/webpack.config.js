@@ -10,6 +10,9 @@ function makeBaseConfig() {
     mode: 'production',
     target: "es5",
     devtool: 'source-map',
+    resolve: {
+      extensions: ['.ts', '.js', '.json']
+    },
     output: {
       libraryTarget: 'window',
       path: __dirname,
@@ -17,6 +20,17 @@ function makeBaseConfig() {
     },
     module: {
       rules: [
+        {
+          test: /\.ts$/,
+          use: {
+            loader: 'ts-loader',
+            options: {
+              configFile: path.resolve(__dirname, '../tsconfig.json'),
+              transpileOnly: true
+            }
+          },
+          exclude: /node_modules/
+        },
         {
           test: /\.m?js$/,
           exclude: /(node_modules\/(?!@lhncbc|antlr4)|bower_components)/,
@@ -56,7 +70,7 @@ config.output.library = 'fhirpath'; // global variable for the library
 config.plugins = [
   new CopyPlugin({
     patterns: [
-      {from: '../LICENSE.md', to: '.'}
+      { from: '../LICENSE.md', to: '.' }
     ]
   }),
 ];
@@ -65,8 +79,8 @@ module.exports.push(config);
 // FHIR model files
 for (let fhirVers of ['dstu2', 'stu3', 'r4', 'r5']) {
   config = makeBaseConfig();
-  config.entry = '../fhir-context/'+fhirVers+'/index';
-  config.output.filename = './fhirpath.'+fhirVers+'.min.js';
-  config.output.library = 'fhirpath_'+fhirVers+'_model';
+  config.entry = '../fhir-context/' + fhirVers + '/index';
+  config.output.filename = './fhirpath.' + fhirVers + '.min.js';
+  config.output.library = 'fhirpath_' + fhirVers + '_model';
   module.exports.push(config);
 }

@@ -24,3 +24,36 @@ rules:
     - always
   no-console:
     - 1
+
+# TypeScript file configuration
+overrides:
+  - files: "**/*.ts"
+    extends:
+      - 'eslint:recommended'
+    parser: '@typescript-eslint/parser'
+    plugins:
+      - '@typescript-eslint'
+    parserOptions:
+      ecmaVersion: 2018
+      sourceType: module
+    env:
+      node: true
+      es2020: true
+      jest: true
+      browser: true
+    globals:
+      Headers: true
+      fetch: true
+      RequestInit: true
+    rules:
+      indent:
+        - error
+        - 2
+        - {SwitchCase: 1}
+      semi:
+        - error
+        - always
+      no-console:
+        - 1
+      '@typescript-eslint/no-unused-vars': 'error'
+      '@typescript-eslint/no-explicit-any': 'off'

@@ -18,7 +18,7 @@ export function types(value: any): string[];
 
 export function parse(expression: string): any;
 
-export const version :string;
+export const version: string;
 
 interface Path {
   base: string;
@@ -50,7 +50,7 @@ interface Model {
 
   /**
    *  A hash of resource element paths (e.g. Observation.value) that are known
-   *  to point to fiels that are choice types.
+   *  to point to fields that are choice types.
    */
   choiceTypePaths: {
     [path: string]: string[];
@@ -107,11 +107,11 @@ interface Model {
 }
 
 interface Options {
-    resolveInternalTypes?: boolean
-    traceFn?: (value: any, label: string) => void,
-    userInvocationTable?: UserInvocationTable,
-    terminologyUrl?: string,
-    signal?: AbortSignal
+  resolveInternalTypes?: boolean
+  traceFn?: (value: any, label: string) => void,
+  userInvocationTable?: UserInvocationTable,
+  terminologyUrl?: string,
+  signal?: AbortSignal
 }
 
 interface NoAsyncOptions extends Options {
@@ -129,9 +129,9 @@ interface AlwaysAsyncOptions extends Options {
 type OptionVariants = NoAsyncOptions | AsyncOptions | AlwaysAsyncOptions;
 
 type ReturnType<T> =
-    T extends AlwaysAsyncOptions ? Promise<any[]> :
-    T extends NoAsyncOptions ? any[] :
-    any[] | Promise<any[]>;
+  T extends AlwaysAsyncOptions ? Promise<any[]> :
+  T extends NoAsyncOptions ? any[] :
+  any[] | Promise<any[]>;
 
 type Compile<T> = (resource: any, envVars?: Context, additionalOptions?: Options) => ReturnType<T>;
 

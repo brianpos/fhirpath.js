@@ -4,104 +4,104 @@ const antlr4 = require('../antlr4-index');
 const FHIRPathListener = require('./FHIRPathListener');
 
 const serializedATN = ["\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786",
-    "\u5964\u0003C\u009e\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004",
-    "\t\u0004\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007",
-    "\u0004\b\t\b\u0004\t\t\t\u0004\n\t\n\u0004\u000b\t\u000b\u0004\f\t\f",
-    "\u0004\r\t\r\u0004\u000e\t\u000e\u0004\u000f\t\u000f\u0004\u0010\t\u0010",
-    "\u0003\u0002\u0003\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0005\u0003(\n\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-    "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0007\u0003",
-    "P\n\u0003\f\u0003\u000e\u0003S\u000b\u0003\u0003\u0004\u0003\u0004\u0003",
-    "\u0004\u0003\u0004\u0003\u0004\u0003\u0004\u0003\u0004\u0005\u0004\\",
-    "\n\u0004\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005",
-    "\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0005\u0005",
-    "h\n\u0005\u0003\u0006\u0003\u0006\u0003\u0006\u0005\u0006m\n\u0006\u0003",
-    "\u0007\u0003\u0007\u0003\u0007\u0003\u0007\u0003\u0007\u0005\u0007t",
-    "\n\u0007\u0003\b\u0003\b\u0003\b\u0005\by\n\b\u0003\b\u0003\b\u0003",
-    "\t\u0003\t\u0003\t\u0007\t\u0080\n\t\f\t\u000e\t\u0083\u000b\t\u0003",
-    "\n\u0003\n\u0005\n\u0087\n\n\u0003\u000b\u0003\u000b\u0003\u000b\u0005",
-    "\u000b\u008c\n\u000b\u0003\f\u0003\f\u0003\r\u0003\r\u0003\u000e\u0003",
-    "\u000e\u0003\u000f\u0003\u000f\u0003\u000f\u0007\u000f\u0097\n\u000f",
-    "\f\u000f\u000e\u000f\u009a\u000b\u000f\u0003\u0010\u0003\u0010\u0003",
-    "\u0010\u0002\u0003\u0004\u0011\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012",
-    "\u0014\u0016\u0018\u001a\u001c\u001e\u0002\u000e\u0003\u0002\u0006\u0007",
-    "\u0003\u0002\b\u000b\u0004\u0002\u0006\u0007\f\f\u0003\u0002\u0010\u0013",
-    "\u0003\u0002\u0014\u0017\u0003\u0002\u0018\u0019\u0003\u0002\u001b\u001c",
-    "\u0003\u0002\r\u000e\u0003\u0002\"#\u0003\u0002)0\u0003\u000218\u0005",
-    "\u0002\r\u000e\u0018\u0019<=\u0002\u00b1\u0002 \u0003\u0002\u0002\u0002",
-    "\u0004\'\u0003\u0002\u0002\u0002\u0006[\u0003\u0002\u0002\u0002\bg\u0003",
-    "\u0002\u0002\u0002\ni\u0003\u0002\u0002\u0002\fs\u0003\u0002\u0002\u0002",
-    "\u000eu\u0003\u0002\u0002\u0002\u0010|\u0003\u0002\u0002\u0002\u0012",
-    "\u0084\u0003\u0002\u0002\u0002\u0014\u008b\u0003\u0002\u0002\u0002\u0016",
-    "\u008d\u0003\u0002\u0002\u0002\u0018\u008f\u0003\u0002\u0002\u0002\u001a",
-    "\u0091\u0003\u0002\u0002\u0002\u001c\u0093\u0003\u0002\u0002\u0002\u001e",
-    "\u009b\u0003\u0002\u0002\u0002 !\u0005\u0004\u0003\u0002!\"\u0007\u0002",
-    "\u0002\u0003\"\u0003\u0003\u0002\u0002\u0002#$\b\u0003\u0001\u0002$",
-    "(\u0005\u0006\u0004\u0002%&\t\u0002\u0002\u0002&(\u0005\u0004\u0003",
-    "\r\'#\u0003\u0002\u0002\u0002\'%\u0003\u0002\u0002\u0002(Q\u0003\u0002",
-    "\u0002\u0002)*\f\f\u0002\u0002*+\t\u0003\u0002\u0002+P\u0005\u0004\u0003",
-    "\r,-\f\u000b\u0002\u0002-.\t\u0004\u0002\u0002.P\u0005\u0004\u0003\f",
-    "/0\f\t\u0002\u000201\u0007\u000f\u0002\u00021P\u0005\u0004\u0003\n2",
-    "3\f\b\u0002\u000234\t\u0005\u0002\u00024P\u0005\u0004\u0003\t56\f\u0007",
-    "\u0002\u000267\t\u0006\u0002\u00027P\u0005\u0004\u0003\b89\f\u0006\u0002",
-    "\u00029:\t\u0007\u0002\u0002:P\u0005\u0004\u0003\u0007;<\f\u0005\u0002",
-    "\u0002<=\u0007\u001a\u0002\u0002=P\u0005\u0004\u0003\u0006>?\f\u0004",
-    "\u0002\u0002?@\t\b\u0002\u0002@P\u0005\u0004\u0003\u0005AB\f\u0003\u0002",
-    "\u0002BC\u0007\u001d\u0002\u0002CP\u0005\u0004\u0003\u0004DE\f\u000f",
-    "\u0002\u0002EF\u0007\u0003\u0002\u0002FP\u0005\f\u0007\u0002GH\f\u000e",
-    "\u0002\u0002HI\u0007\u0004\u0002\u0002IJ\u0005\u0004\u0003\u0002JK\u0007",
-    "\u0005\u0002\u0002KP\u0003\u0002\u0002\u0002LM\f\n\u0002\u0002MN\t\t",
-    "\u0002\u0002NP\u0005\u001a\u000e\u0002O)\u0003\u0002\u0002\u0002O,\u0003",
-    "\u0002\u0002\u0002O/\u0003\u0002\u0002\u0002O2\u0003\u0002\u0002\u0002",
-    "O5\u0003\u0002\u0002\u0002O8\u0003\u0002\u0002\u0002O;\u0003\u0002\u0002",
-    "\u0002O>\u0003\u0002\u0002\u0002OA\u0003\u0002\u0002\u0002OD\u0003\u0002",
-    "\u0002\u0002OG\u0003\u0002\u0002\u0002OL\u0003\u0002\u0002\u0002PS\u0003",
-    "\u0002\u0002\u0002QO\u0003\u0002\u0002\u0002QR\u0003\u0002\u0002\u0002",
-    "R\u0005\u0003\u0002\u0002\u0002SQ\u0003\u0002\u0002\u0002T\\\u0005\f",
-    "\u0007\u0002U\\\u0005\b\u0005\u0002V\\\u0005\n\u0006\u0002WX\u0007\u001e",
-    "\u0002\u0002XY\u0005\u0004\u0003\u0002YZ\u0007\u001f\u0002\u0002Z\\",
-    "\u0003\u0002\u0002\u0002[T\u0003\u0002\u0002\u0002[U\u0003\u0002\u0002",
-    "\u0002[V\u0003\u0002\u0002\u0002[W\u0003\u0002\u0002\u0002\\\u0007\u0003",
-    "\u0002\u0002\u0002]^\u0007 \u0002\u0002^h\u0007!\u0002\u0002_h\t\n\u0002",
-    "\u0002`h\u0007>\u0002\u0002ah\u0007?\u0002\u0002bh\u0007@\u0002\u0002",
-    "ch\u00079\u0002\u0002dh\u0007:\u0002\u0002eh\u0007;\u0002\u0002fh\u0005",
-    "\u0012\n\u0002g]\u0003\u0002\u0002\u0002g_\u0003\u0002\u0002\u0002g",
-    "`\u0003\u0002\u0002\u0002ga\u0003\u0002\u0002\u0002gb\u0003\u0002\u0002",
-    "\u0002gc\u0003\u0002\u0002\u0002gd\u0003\u0002\u0002\u0002ge\u0003\u0002",
-    "\u0002\u0002gf\u0003\u0002\u0002\u0002h\t\u0003\u0002\u0002\u0002il",
-    "\u0007$\u0002\u0002jm\u0005\u001e\u0010\u0002km\u0007>\u0002\u0002l",
-    "j\u0003\u0002\u0002\u0002lk\u0003\u0002\u0002\u0002m\u000b\u0003\u0002",
-    "\u0002\u0002nt\u0005\u001e\u0010\u0002ot\u0005\u000e\b\u0002pt\u0007",
-    "%\u0002\u0002qt\u0007&\u0002\u0002rt\u0007\'\u0002\u0002sn\u0003\u0002",
-    "\u0002\u0002so\u0003\u0002\u0002\u0002sp\u0003\u0002\u0002\u0002sq\u0003",
-    "\u0002\u0002\u0002sr\u0003\u0002\u0002\u0002t\r\u0003\u0002\u0002\u0002",
-    "uv\u0005\u001e\u0010\u0002vx\u0007\u001e\u0002\u0002wy\u0005\u0010\t",
-    "\u0002xw\u0003\u0002\u0002\u0002xy\u0003\u0002\u0002\u0002yz\u0003\u0002",
-    "\u0002\u0002z{\u0007\u001f\u0002\u0002{\u000f\u0003\u0002\u0002\u0002",
-    "|\u0081\u0005\u0004\u0003\u0002}~\u0007(\u0002\u0002~\u0080\u0005\u0004",
-    "\u0003\u0002\u007f}\u0003\u0002\u0002\u0002\u0080\u0083\u0003\u0002",
-    "\u0002\u0002\u0081\u007f\u0003\u0002\u0002\u0002\u0081\u0082\u0003\u0002",
-    "\u0002\u0002\u0082\u0011\u0003\u0002\u0002\u0002\u0083\u0081\u0003\u0002",
-    "\u0002\u0002\u0084\u0086\u0007?\u0002\u0002\u0085\u0087\u0005\u0014",
-    "\u000b\u0002\u0086\u0085\u0003\u0002\u0002\u0002\u0086\u0087\u0003\u0002",
-    "\u0002\u0002\u0087\u0013\u0003\u0002\u0002\u0002\u0088\u008c\u0005\u0016",
-    "\f\u0002\u0089\u008c\u0005\u0018\r\u0002\u008a\u008c\u0007>\u0002\u0002",
-    "\u008b\u0088\u0003\u0002\u0002\u0002\u008b\u0089\u0003\u0002\u0002\u0002",
-    "\u008b\u008a\u0003\u0002\u0002\u0002\u008c\u0015\u0003\u0002\u0002\u0002",
-    "\u008d\u008e\t\u000b\u0002\u0002\u008e\u0017\u0003\u0002\u0002\u0002",
-    "\u008f\u0090\t\f\u0002\u0002\u0090\u0019\u0003\u0002\u0002\u0002\u0091",
-    "\u0092\u0005\u001c\u000f\u0002\u0092\u001b\u0003\u0002\u0002\u0002\u0093",
-    "\u0098\u0005\u001e\u0010\u0002\u0094\u0095\u0007\u0003\u0002\u0002\u0095",
-    "\u0097\u0005\u001e\u0010\u0002\u0096\u0094\u0003\u0002\u0002\u0002\u0097",
-    "\u009a\u0003\u0002\u0002\u0002\u0098\u0096\u0003\u0002\u0002\u0002\u0098",
-    "\u0099\u0003\u0002\u0002\u0002\u0099\u001d\u0003\u0002\u0002\u0002\u009a",
-    "\u0098\u0003\u0002\u0002\u0002\u009b\u009c\t\r\u0002\u0002\u009c\u001f",
-    "\u0003\u0002\u0002\u0002\u000e\'OQ[glsx\u0081\u0086\u008b\u0098"].join("");
+  "\u5964\u0003C\u009e\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004",
+  "\t\u0004\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007",
+  "\u0004\b\t\b\u0004\t\t\t\u0004\n\t\n\u0004\u000b\t\u000b\u0004\f\t\f",
+  "\u0004\r\t\r\u0004\u000e\t\u000e\u0004\u000f\t\u000f\u0004\u0010\t\u0010",
+  "\u0003\u0002\u0003\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0005\u0003(\n\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0007\u0003",
+  "P\n\u0003\f\u0003\u000e\u0003S\u000b\u0003\u0003\u0004\u0003\u0004\u0003",
+  "\u0004\u0003\u0004\u0003\u0004\u0003\u0004\u0003\u0004\u0005\u0004\\",
+  "\n\u0004\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005",
+  "\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0003\u0005\u0005\u0005",
+  "h\n\u0005\u0003\u0006\u0003\u0006\u0003\u0006\u0005\u0006m\n\u0006\u0003",
+  "\u0007\u0003\u0007\u0003\u0007\u0003\u0007\u0003\u0007\u0005\u0007t",
+  "\n\u0007\u0003\b\u0003\b\u0003\b\u0005\by\n\b\u0003\b\u0003\b\u0003",
+  "\t\u0003\t\u0003\t\u0007\t\u0080\n\t\f\t\u000e\t\u0083\u000b\t\u0003",
+  "\n\u0003\n\u0005\n\u0087\n\n\u0003\u000b\u0003\u000b\u0003\u000b\u0005",
+  "\u000b\u008c\n\u000b\u0003\f\u0003\f\u0003\r\u0003\r\u0003\u000e\u0003",
+  "\u000e\u0003\u000f\u0003\u000f\u0003\u000f\u0007\u000f\u0097\n\u000f",
+  "\f\u000f\u000e\u000f\u009a\u000b\u000f\u0003\u0010\u0003\u0010\u0003",
+  "\u0010\u0002\u0003\u0004\u0011\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012",
+  "\u0014\u0016\u0018\u001a\u001c\u001e\u0002\u000e\u0003\u0002\u0006\u0007",
+  "\u0003\u0002\b\u000b\u0004\u0002\u0006\u0007\f\f\u0003\u0002\u0010\u0013",
+  "\u0003\u0002\u0014\u0017\u0003\u0002\u0018\u0019\u0003\u0002\u001b\u001c",
+  "\u0003\u0002\r\u000e\u0003\u0002\"#\u0003\u0002)0\u0003\u000218\u0005",
+  "\u0002\r\u000e\u0018\u0019<=\u0002\u00b1\u0002 \u0003\u0002\u0002\u0002",
+  "\u0004\'\u0003\u0002\u0002\u0002\u0006[\u0003\u0002\u0002\u0002\bg\u0003",
+  "\u0002\u0002\u0002\ni\u0003\u0002\u0002\u0002\fs\u0003\u0002\u0002\u0002",
+  "\u000eu\u0003\u0002\u0002\u0002\u0010|\u0003\u0002\u0002\u0002\u0012",
+  "\u0084\u0003\u0002\u0002\u0002\u0014\u008b\u0003\u0002\u0002\u0002\u0016",
+  "\u008d\u0003\u0002\u0002\u0002\u0018\u008f\u0003\u0002\u0002\u0002\u001a",
+  "\u0091\u0003\u0002\u0002\u0002\u001c\u0093\u0003\u0002\u0002\u0002\u001e",
+  "\u009b\u0003\u0002\u0002\u0002 !\u0005\u0004\u0003\u0002!\"\u0007\u0002",
+  "\u0002\u0003\"\u0003\u0003\u0002\u0002\u0002#$\b\u0003\u0001\u0002$",
+  "(\u0005\u0006\u0004\u0002%&\t\u0002\u0002\u0002&(\u0005\u0004\u0003",
+  "\r\'#\u0003\u0002\u0002\u0002\'%\u0003\u0002\u0002\u0002(Q\u0003\u0002",
+  "\u0002\u0002)*\f\f\u0002\u0002*+\t\u0003\u0002\u0002+P\u0005\u0004\u0003",
+  "\r,-\f\u000b\u0002\u0002-.\t\u0004\u0002\u0002.P\u0005\u0004\u0003\f",
+  "/0\f\t\u0002\u000201\u0007\u000f\u0002\u00021P\u0005\u0004\u0003\n2",
+  "3\f\b\u0002\u000234\t\u0005\u0002\u00024P\u0005\u0004\u0003\t56\f\u0007",
+  "\u0002\u000267\t\u0006\u0002\u00027P\u0005\u0004\u0003\b89\f\u0006\u0002",
+  "\u00029:\t\u0007\u0002\u0002:P\u0005\u0004\u0003\u0007;<\f\u0005\u0002",
+  "\u0002<=\u0007\u001a\u0002\u0002=P\u0005\u0004\u0003\u0006>?\f\u0004",
+  "\u0002\u0002?@\t\b\u0002\u0002@P\u0005\u0004\u0003\u0005AB\f\u0003\u0002",
+  "\u0002BC\u0007\u001d\u0002\u0002CP\u0005\u0004\u0003\u0004DE\f\u000f",
+  "\u0002\u0002EF\u0007\u0003\u0002\u0002FP\u0005\f\u0007\u0002GH\f\u000e",
+  "\u0002\u0002HI\u0007\u0004\u0002\u0002IJ\u0005\u0004\u0003\u0002JK\u0007",
+  "\u0005\u0002\u0002KP\u0003\u0002\u0002\u0002LM\f\n\u0002\u0002MN\t\t",
+  "\u0002\u0002NP\u0005\u001a\u000e\u0002O)\u0003\u0002\u0002\u0002O,\u0003",
+  "\u0002\u0002\u0002O/\u0003\u0002\u0002\u0002O2\u0003\u0002\u0002\u0002",
+  "O5\u0003\u0002\u0002\u0002O8\u0003\u0002\u0002\u0002O;\u0003\u0002\u0002",
+  "\u0002O>\u0003\u0002\u0002\u0002OA\u0003\u0002\u0002\u0002OD\u0003\u0002",
+  "\u0002\u0002OG\u0003\u0002\u0002\u0002OL\u0003\u0002\u0002\u0002PS\u0003",
+  "\u0002\u0002\u0002QO\u0003\u0002\u0002\u0002QR\u0003\u0002\u0002\u0002",
+  "R\u0005\u0003\u0002\u0002\u0002SQ\u0003\u0002\u0002\u0002T\\\u0005\f",
+  "\u0007\u0002U\\\u0005\b\u0005\u0002V\\\u0005\n\u0006\u0002WX\u0007\u001e",
+  "\u0002\u0002XY\u0005\u0004\u0003\u0002YZ\u0007\u001f\u0002\u0002Z\\",
+  "\u0003\u0002\u0002\u0002[T\u0003\u0002\u0002\u0002[U\u0003\u0002\u0002",
+  "\u0002[V\u0003\u0002\u0002\u0002[W\u0003\u0002\u0002\u0002\\\u0007\u0003",
+  "\u0002\u0002\u0002]^\u0007 \u0002\u0002^h\u0007!\u0002\u0002_h\t\n\u0002",
+  "\u0002`h\u0007>\u0002\u0002ah\u0007?\u0002\u0002bh\u0007@\u0002\u0002",
+  "ch\u00079\u0002\u0002dh\u0007:\u0002\u0002eh\u0007;\u0002\u0002fh\u0005",
+  "\u0012\n\u0002g]\u0003\u0002\u0002\u0002g_\u0003\u0002\u0002\u0002g",
+  "`\u0003\u0002\u0002\u0002ga\u0003\u0002\u0002\u0002gb\u0003\u0002\u0002",
+  "\u0002gc\u0003\u0002\u0002\u0002gd\u0003\u0002\u0002\u0002ge\u0003\u0002",
+  "\u0002\u0002gf\u0003\u0002\u0002\u0002h\t\u0003\u0002\u0002\u0002il",
+  "\u0007$\u0002\u0002jm\u0005\u001e\u0010\u0002km\u0007>\u0002\u0002l",
+  "j\u0003\u0002\u0002\u0002lk\u0003\u0002\u0002\u0002m\u000b\u0003\u0002",
+  "\u0002\u0002nt\u0005\u001e\u0010\u0002ot\u0005\u000e\b\u0002pt\u0007",
+  "%\u0002\u0002qt\u0007&\u0002\u0002rt\u0007\'\u0002\u0002sn\u0003\u0002",
+  "\u0002\u0002so\u0003\u0002\u0002\u0002sp\u0003\u0002\u0002\u0002sq\u0003",
+  "\u0002\u0002\u0002sr\u0003\u0002\u0002\u0002t\r\u0003\u0002\u0002\u0002",
+  "uv\u0005\u001e\u0010\u0002vx\u0007\u001e\u0002\u0002wy\u0005\u0010\t",
+  "\u0002xw\u0003\u0002\u0002\u0002xy\u0003\u0002\u0002\u0002yz\u0003\u0002",
+  "\u0002\u0002z{\u0007\u001f\u0002\u0002{\u000f\u0003\u0002\u0002\u0002",
+  "|\u0081\u0005\u0004\u0003\u0002}~\u0007(\u0002\u0002~\u0080\u0005\u0004",
+  "\u0003\u0002\u007f}\u0003\u0002\u0002\u0002\u0080\u0083\u0003\u0002",
+  "\u0002\u0002\u0081\u007f\u0003\u0002\u0002\u0002\u0081\u0082\u0003\u0002",
+  "\u0002\u0002\u0082\u0011\u0003\u0002\u0002\u0002\u0083\u0081\u0003\u0002",
+  "\u0002\u0002\u0084\u0086\u0007?\u0002\u0002\u0085\u0087\u0005\u0014",
+  "\u000b\u0002\u0086\u0085\u0003\u0002\u0002\u0002\u0086\u0087\u0003\u0002",
+  "\u0002\u0002\u0087\u0013\u0003\u0002\u0002\u0002\u0088\u008c\u0005\u0016",
+  "\f\u0002\u0089\u008c\u0005\u0018\r\u0002\u008a\u008c\u0007>\u0002\u0002",
+  "\u008b\u0088\u0003\u0002\u0002\u0002\u008b\u0089\u0003\u0002\u0002\u0002",
+  "\u008b\u008a\u0003\u0002\u0002\u0002\u008c\u0015\u0003\u0002\u0002\u0002",
+  "\u008d\u008e\t\u000b\u0002\u0002\u008e\u0017\u0003\u0002\u0002\u0002",
+  "\u008f\u0090\t\f\u0002\u0002\u0090\u0019\u0003\u0002\u0002\u0002\u0091",
+  "\u0092\u0005\u001c\u000f\u0002\u0092\u001b\u0003\u0002\u0002\u0002\u0093",
+  "\u0098\u0005\u001e\u0010\u0002\u0094\u0095\u0007\u0003\u0002\u0002\u0095",
+  "\u0097\u0005\u001e\u0010\u0002\u0096\u0094\u0003\u0002\u0002\u0002\u0097",
+  "\u009a\u0003\u0002\u0002\u0002\u0098\u0096\u0003\u0002\u0002\u0002\u0098",
+  "\u0099\u0003\u0002\u0002\u0002\u0099\u001d\u0003\u0002\u0002\u0002\u009a",
+  "\u0098\u0003\u0002\u0002\u0002\u009b\u009c\t\r\u0002\u0002\u009c\u001f",
+  "\u0003\u0002\u0002\u0002\u000e\'OQ[glsx\u0081\u0086\u008b\u0098"].join("");
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -112,55 +112,55 @@ const sharedContextCache = new antlr4.PredictionContextCache();
 
 class FHIRPathParser extends antlr4.Parser {
 
-    static grammarFileName = "FHIRPath.g4";
-    static literalNames = [ null, "'.'", "'['", "']'", "'+'", "'-'", "'*'", 
-                            "'/'", "'div'", "'mod'", "'&'", "'is'", "'as'", 
-                            "'|'", "'<='", "'<'", "'>'", "'>='", "'='", 
-                            "'~'", "'!='", "'!~'", "'in'", "'contains'", 
-                            "'and'", "'or'", "'xor'", "'implies'", "'('", 
-                            "')'", "'{'", "'}'", "'true'", "'false'", "'%'", 
-                            "'$this'", "'$index'", "'$total'", "','", "'year'", 
-                            "'month'", "'week'", "'day'", "'hour'", "'minute'", 
-                            "'second'", "'millisecond'", "'years'", "'months'", 
-                            "'weeks'", "'days'", "'hours'", "'minutes'", 
-                            "'seconds'", "'milliseconds'" ];
-    static symbolicNames = [ null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, null, 
-                             null, null, null, null, null, null, null, "DATE", 
-                             "DATETIME", "TIME", "IDENTIFIER", "DELIMITEDIDENTIFIER", 
-                             "STRING", "NUMBER", "LONGNUMBER", "WS", "COMMENT", 
-                             "LINE_COMMENT" ];
-    static ruleNames = [ "entireExpression", "expression", "term", "literal", 
-                         "externalConstant", "invocation", "functn", "paramList", 
-                         "quantity", "unit", "dateTimePrecision", "pluralDateTimePrecision", 
-                         "typeSpecifier", "qualifiedIdentifier", "identifier" ];
+  static grammarFileName = "FHIRPath.g4";
+  static literalNames = [ null, "'.'", "'['", "']'", "'+'", "'-'", "'*'", 
+    "'/'", "'div'", "'mod'", "'&'", "'is'", "'as'", 
+    "'|'", "'<='", "'<'", "'>'", "'>='", "'='", 
+    "'~'", "'!='", "'!~'", "'in'", "'contains'", 
+    "'and'", "'or'", "'xor'", "'implies'", "'('", 
+    "')'", "'{'", "'}'", "'true'", "'false'", "'%'", 
+    "'$this'", "'$index'", "'$total'", "','", "'year'", 
+    "'month'", "'week'", "'day'", "'hour'", "'minute'", 
+    "'second'", "'millisecond'", "'years'", "'months'", 
+    "'weeks'", "'days'", "'hours'", "'minutes'", 
+    "'seconds'", "'milliseconds'" ];
+  static symbolicNames = [ null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, "DATE", 
+    "DATETIME", "TIME", "IDENTIFIER", "DELIMITEDIDENTIFIER", 
+    "STRING", "NUMBER", "LONGNUMBER", "WS", "COMMENT", 
+    "LINE_COMMENT" ];
+  static ruleNames = [ "entireExpression", "expression", "term", "literal", 
+    "externalConstant", "invocation", "functn", "paramList", 
+    "quantity", "unit", "dateTimePrecision", "pluralDateTimePrecision", 
+    "typeSpecifier", "qualifiedIdentifier", "identifier" ];
 
-    constructor(input) {
-        super(input);
-        this._interp = new antlr4.atn.ParserATNSimulator(this, atn, decisionsToDFA, sharedContextCache);
-        this.ruleNames = FHIRPathParser.ruleNames;
-        this.literalNames = FHIRPathParser.literalNames;
-        this.symbolicNames = FHIRPathParser.symbolicNames;
-    }
+  constructor(input) {
+    super(input);
+    this._interp = new antlr4.atn.ParserATNSimulator(this, atn, decisionsToDFA, sharedContextCache);
+    this.ruleNames = FHIRPathParser.ruleNames;
+    this.literalNames = FHIRPathParser.literalNames;
+    this.symbolicNames = FHIRPathParser.symbolicNames;
+  }
 
-    get atn() {
-        return atn;
-    }
+  get atn() {
+    return atn;
+  }
 
-    sempred(localctx, ruleIndex, predIndex) {
+  sempred(localctx, ruleIndex, predIndex) {
     	switch(ruleIndex) {
     	case 1:
     	    		return this.expression_sempred(localctx, predIndex);
-        default:
-            throw "No predicate with index:" + ruleIndex;
-       }
+      default:
+        throw "No predicate with index:" + ruleIndex;
     }
+  }
 
-    expression_sempred(localctx, predIndex) {
+  expression_sempred(localctx, predIndex) {
     	switch(predIndex) {
     		case 0:
     			return this.precpred(this._ctx, 10);
@@ -189,12 +189,12 @@ class FHIRPathParser extends antlr4.Parser {
     		default:
     			throw "No predicate with index:" + predIndex;
     	}
-    };
+  }
 
 
 
 
-	entireExpression() {
+  entireExpression() {
 	    let localctx = new EntireExpressionContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 0, FHIRPathParser.RULE_entireExpression);
 	    try {
@@ -215,13 +215,13 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
-	expression(_p) {
-		if(_p===undefined) {
+  expression(_p) {
+    if(_p===undefined) {
 		    _p = 0;
-		}
+    }
 	    const _parentctx = this._ctx;
 	    const _parentState = this.state;
 	    let localctx = new ExpressionContext(this, this._ctx, _parentState);
@@ -284,7 +284,7 @@ class FHIRPathParser extends antlr4.Parser {
 	        this._ctx.stop = this._input.LT(-1);
 	        this.state = 79;
 	        this._errHandler.sync(this);
-	        var _alt = this._interp.adaptivePredict(this._input,2,this._ctx)
+	        var _alt = this._interp.adaptivePredict(this._input,2,this._ctx);
 	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
 	            if(_alt===1) {
 	                if(this._parseListeners!==null) {
@@ -518,14 +518,14 @@ class FHIRPathParser extends antlr4.Parser {
 		    	throw error;
 		    }
 	    } finally {
-	        this.unrollRecursionContexts(_parentctx)
+	        this.unrollRecursionContexts(_parentctx);
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	term() {
+  term() {
 	    let localctx = new TermContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 4, FHIRPathParser.RULE_term);
 	    try {
@@ -591,11 +591,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	literal() {
+  literal() {
 	    let localctx = new LiteralContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 6, FHIRPathParser.RULE_literal);
 	    var _la = 0; // Token type
@@ -689,11 +689,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	externalConstant() {
+  externalConstant() {
 	    let localctx = new ExternalConstantContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 8, FHIRPathParser.RULE_externalConstant);
 	    try {
@@ -731,11 +731,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	invocation() {
+  invocation() {
 	    let localctx = new InvocationContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 10, FHIRPathParser.RULE_invocation);
 	    try {
@@ -791,11 +791,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	functn() {
+  functn() {
 	    let localctx = new FunctnContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 12, FHIRPathParser.RULE_functn);
 	    var _la = 0; // Token type
@@ -827,11 +827,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	paramList() {
+  paramList() {
 	    let localctx = new ParamListContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 14, FHIRPathParser.RULE_paramList);
 	    var _la = 0; // Token type
@@ -863,11 +863,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	quantity() {
+  quantity() {
 	    let localctx = new QuantityContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 16, FHIRPathParser.RULE_quantity);
 	    try {
@@ -894,11 +894,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	unit() {
+  unit() {
 	    let localctx = new UnitContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 18, FHIRPathParser.RULE_unit);
 	    try {
@@ -949,11 +949,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	dateTimePrecision() {
+  dateTimePrecision() {
 	    let localctx = new DateTimePrecisionContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 20, FHIRPathParser.RULE_dateTimePrecision);
 	    var _la = 0; // Token type
@@ -980,11 +980,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	pluralDateTimePrecision() {
+  pluralDateTimePrecision() {
 	    let localctx = new PluralDateTimePrecisionContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 22, FHIRPathParser.RULE_pluralDateTimePrecision);
 	    var _la = 0; // Token type
@@ -1011,11 +1011,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	typeSpecifier() {
+  typeSpecifier() {
 	    let localctx = new TypeSpecifierContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 24, FHIRPathParser.RULE_typeSpecifier);
 	    try {
@@ -1034,11 +1034,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	qualifiedIdentifier() {
+  qualifiedIdentifier() {
 	    let localctx = new QualifiedIdentifierContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 26, FHIRPathParser.RULE_qualifiedIdentifier);
 	    try {
@@ -1047,7 +1047,7 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.identifier();
 	        this.state = 150;
 	        this._errHandler.sync(this);
-	        var _alt = this._interp.adaptivePredict(this._input,11,this._ctx)
+	        var _alt = this._interp.adaptivePredict(this._input,11,this._ctx);
 	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
 	            if(_alt===1) {
 	                this.state = 146;
@@ -1072,11 +1072,11 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 
-	identifier() {
+  identifier() {
 	    let localctx = new IdentifierContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 28, FHIRPathParser.RULE_identifier);
 	    var _la = 0; // Token type
@@ -1103,7 +1103,7 @@ class FHIRPathParser extends antlr4.Parser {
 	        this.exitRule();
 	    }
 	    return localctx;
-	}
+  }
 
 
 }
@@ -1193,37 +1193,37 @@ FHIRPathParser.RULE_identifier = 14;
 
 class EntireExpressionContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_entireExpression;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_entireExpression;
+  }
 
-	expression() {
+  expression() {
 	    return this.getTypedRuleContext(ExpressionContext,0);
-	};
+  }
 
-	EOF() {
+  EOF() {
 	    return this.getToken(FHIRPathParser.EOF, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterEntireExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitEntireExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1232,35 +1232,35 @@ class EntireExpressionContext extends antlr4.ParserRuleContext {
 
 class ExpressionContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_expression;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_expression;
+  }
 
 
 	 
-		copyFrom(ctx) {
-			super.copyFrom(ctx);
-		}
+  copyFrom(ctx) {
+    super.copyFrom(ctx);
+  }
 
 }
 
 
 class IndexerExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1269,19 +1269,19 @@ class IndexerExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterIndexerExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitIndexerExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1290,26 +1290,26 @@ FHIRPathParser.IndexerExpressionContext = IndexerExpressionContext;
 
 class PolarityExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression() {
+  expression() {
 	    return this.getTypedRuleContext(ExpressionContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterPolarityExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitPolarityExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1318,12 +1318,12 @@ FHIRPathParser.PolarityExpressionContext = PolarityExpressionContext;
 
 class AdditiveExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1332,19 +1332,19 @@ class AdditiveExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterAdditiveExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitAdditiveExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1353,12 +1353,12 @@ FHIRPathParser.AdditiveExpressionContext = AdditiveExpressionContext;
 
 class MultiplicativeExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1367,19 +1367,19 @@ class MultiplicativeExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterMultiplicativeExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitMultiplicativeExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1388,12 +1388,12 @@ FHIRPathParser.MultiplicativeExpressionContext = MultiplicativeExpressionContext
 
 class UnionExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1402,19 +1402,19 @@ class UnionExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterUnionExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitUnionExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1423,12 +1423,12 @@ FHIRPathParser.UnionExpressionContext = UnionExpressionContext;
 
 class OrExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1437,19 +1437,19 @@ class OrExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterOrExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitOrExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1458,12 +1458,12 @@ FHIRPathParser.OrExpressionContext = OrExpressionContext;
 
 class AndExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1472,19 +1472,19 @@ class AndExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterAndExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitAndExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1493,12 +1493,12 @@ FHIRPathParser.AndExpressionContext = AndExpressionContext;
 
 class MembershipExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1507,19 +1507,19 @@ class MembershipExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterMembershipExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitMembershipExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1528,12 +1528,12 @@ FHIRPathParser.MembershipExpressionContext = MembershipExpressionContext;
 
 class InequalityExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1542,19 +1542,19 @@ class InequalityExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterInequalityExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitInequalityExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1563,30 +1563,30 @@ FHIRPathParser.InequalityExpressionContext = InequalityExpressionContext;
 
 class InvocationExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression() {
+  expression() {
 	    return this.getTypedRuleContext(ExpressionContext,0);
-	};
+  }
 
-	invocation() {
+  invocation() {
 	    return this.getTypedRuleContext(InvocationContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterInvocationExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitInvocationExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1595,12 +1595,12 @@ FHIRPathParser.InvocationExpressionContext = InvocationExpressionContext;
 
 class EqualityExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1609,19 +1609,19 @@ class EqualityExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterEqualityExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitEqualityExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1630,12 +1630,12 @@ FHIRPathParser.EqualityExpressionContext = EqualityExpressionContext;
 
 class ImpliesExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -1644,19 +1644,19 @@ class ImpliesExpressionContext extends ExpressionContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterImpliesExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitImpliesExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1665,26 +1665,26 @@ FHIRPathParser.ImpliesExpressionContext = ImpliesExpressionContext;
 
 class TermExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	term() {
+  term() {
 	    return this.getTypedRuleContext(TermContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterTermExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitTermExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1693,30 +1693,30 @@ FHIRPathParser.TermExpressionContext = TermExpressionContext;
 
 class TypeExpressionContext extends ExpressionContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression() {
+  expression() {
 	    return this.getTypedRuleContext(ExpressionContext,0);
-	};
+  }
 
-	typeSpecifier() {
+  typeSpecifier() {
 	    return this.getTypedRuleContext(TypeSpecifierContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterTypeExpression(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitTypeExpression(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1725,49 +1725,49 @@ FHIRPathParser.TypeExpressionContext = TypeExpressionContext;
 
 class TermContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_term;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_term;
+  }
 
 
 	 
-		copyFrom(ctx) {
-			super.copyFrom(ctx);
-		}
+  copyFrom(ctx) {
+    super.copyFrom(ctx);
+  }
 
 }
 
 
 class ExternalConstantTermContext extends TermContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	externalConstant() {
+  externalConstant() {
 	    return this.getTypedRuleContext(ExternalConstantContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterExternalConstantTerm(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitExternalConstantTerm(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1776,26 +1776,26 @@ FHIRPathParser.ExternalConstantTermContext = ExternalConstantTermContext;
 
 class LiteralTermContext extends TermContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	literal() {
+  literal() {
 	    return this.getTypedRuleContext(LiteralContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterLiteralTerm(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitLiteralTerm(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1804,26 +1804,26 @@ FHIRPathParser.LiteralTermContext = LiteralTermContext;
 
 class ParenthesizedTermContext extends TermContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	expression() {
+  expression() {
 	    return this.getTypedRuleContext(ExpressionContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterParenthesizedTerm(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitParenthesizedTerm(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1832,26 +1832,26 @@ FHIRPathParser.ParenthesizedTermContext = ParenthesizedTermContext;
 
 class InvocationTermContext extends TermContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	invocation() {
+  invocation() {
 	    return this.getTypedRuleContext(InvocationContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterInvocationTerm(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitInvocationTerm(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1860,49 +1860,49 @@ FHIRPathParser.InvocationTermContext = InvocationTermContext;
 
 class LiteralContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_literal;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_literal;
+  }
 
 
 	 
-		copyFrom(ctx) {
-			super.copyFrom(ctx);
-		}
+  copyFrom(ctx) {
+    super.copyFrom(ctx);
+  }
 
 }
 
 
 class TimeLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	TIME() {
+  TIME() {
 	    return this.getToken(FHIRPathParser.TIME, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterTimeLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitTimeLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1911,23 +1911,23 @@ FHIRPathParser.TimeLiteralContext = TimeLiteralContext;
 
 class NullLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterNullLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitNullLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1936,26 +1936,26 @@ FHIRPathParser.NullLiteralContext = NullLiteralContext;
 
 class DateTimeLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	DATETIME() {
+  DATETIME() {
 	    return this.getToken(FHIRPathParser.DATETIME, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterDateTimeLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitDateTimeLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1964,26 +1964,26 @@ FHIRPathParser.DateTimeLiteralContext = DateTimeLiteralContext;
 
 class StringLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	STRING() {
+  STRING() {
 	    return this.getToken(FHIRPathParser.STRING, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterStringLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitStringLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -1992,26 +1992,26 @@ FHIRPathParser.StringLiteralContext = StringLiteralContext;
 
 class DateLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	DATE() {
+  DATE() {
 	    return this.getToken(FHIRPathParser.DATE, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterDateLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitDateLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2020,23 +2020,23 @@ FHIRPathParser.DateLiteralContext = DateLiteralContext;
 
 class BooleanLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterBooleanLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitBooleanLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2045,26 +2045,26 @@ FHIRPathParser.BooleanLiteralContext = BooleanLiteralContext;
 
 class NumberLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	NUMBER() {
+  NUMBER() {
 	    return this.getToken(FHIRPathParser.NUMBER, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterNumberLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitNumberLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2073,26 +2073,26 @@ FHIRPathParser.NumberLiteralContext = NumberLiteralContext;
 
 class LongNumberLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	LONGNUMBER() {
+  LONGNUMBER() {
 	    return this.getToken(FHIRPathParser.LONGNUMBER, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterLongNumberLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitLongNumberLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2101,26 +2101,26 @@ FHIRPathParser.LongNumberLiteralContext = LongNumberLiteralContext;
 
 class QuantityLiteralContext extends LiteralContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	quantity() {
+  quantity() {
 	    return this.getTypedRuleContext(QuantityContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterQuantityLiteral(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitQuantityLiteral(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2129,37 +2129,37 @@ FHIRPathParser.QuantityLiteralContext = QuantityLiteralContext;
 
 class ExternalConstantContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_externalConstant;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_externalConstant;
+  }
 
-	identifier() {
+  identifier() {
 	    return this.getTypedRuleContext(IdentifierContext,0);
-	};
+  }
 
-	STRING() {
+  STRING() {
 	    return this.getToken(FHIRPathParser.STRING, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterExternalConstant(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitExternalConstant(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2168,46 +2168,46 @@ class ExternalConstantContext extends antlr4.ParserRuleContext {
 
 class InvocationContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_invocation;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_invocation;
+  }
 
 
 	 
-		copyFrom(ctx) {
-			super.copyFrom(ctx);
-		}
+  copyFrom(ctx) {
+    super.copyFrom(ctx);
+  }
 
 }
 
 
 class TotalInvocationContext extends InvocationContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterTotalInvocation(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitTotalInvocation(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2216,23 +2216,23 @@ FHIRPathParser.TotalInvocationContext = TotalInvocationContext;
 
 class ThisInvocationContext extends InvocationContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterThisInvocation(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitThisInvocation(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2241,23 +2241,23 @@ FHIRPathParser.ThisInvocationContext = ThisInvocationContext;
 
 class IndexInvocationContext extends InvocationContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterIndexInvocation(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitIndexInvocation(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2266,26 +2266,26 @@ FHIRPathParser.IndexInvocationContext = IndexInvocationContext;
 
 class FunctionInvocationContext extends InvocationContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	functn() {
+  functn() {
 	    return this.getTypedRuleContext(FunctnContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterFunctionInvocation(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitFunctionInvocation(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2294,26 +2294,26 @@ FHIRPathParser.FunctionInvocationContext = FunctionInvocationContext;
 
 class MemberInvocationContext extends InvocationContext {
 
-    constructor(parser, ctx) {
-        super(parser);
-        super.copyFrom(ctx);
-    }
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
 
-	identifier() {
+  identifier() {
 	    return this.getTypedRuleContext(IdentifierContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterMemberInvocation(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitMemberInvocation(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2322,37 +2322,37 @@ FHIRPathParser.MemberInvocationContext = MemberInvocationContext;
 
 class FunctnContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_functn;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_functn;
+  }
 
-	identifier() {
+  identifier() {
 	    return this.getTypedRuleContext(IdentifierContext,0);
-	};
+  }
 
-	paramList() {
+  paramList() {
 	    return this.getTypedRuleContext(ParamListContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterFunctn(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitFunctn(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2361,19 +2361,19 @@ class FunctnContext extends antlr4.ParserRuleContext {
 
 class ParamListContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_paramList;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_paramList;
+  }
 
-	expression = function(i) {
+  expression = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -2382,19 +2382,19 @@ class ParamListContext extends antlr4.ParserRuleContext {
 	    } else {
 	        return this.getTypedRuleContext(ExpressionContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterParamList(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitParamList(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2403,37 +2403,37 @@ class ParamListContext extends antlr4.ParserRuleContext {
 
 class QuantityContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_quantity;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_quantity;
+  }
 
-	NUMBER() {
+  NUMBER() {
 	    return this.getToken(FHIRPathParser.NUMBER, 0);
-	};
+  }
 
-	unit() {
+  unit() {
 	    return this.getTypedRuleContext(UnitContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterQuantity(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitQuantity(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2442,41 +2442,41 @@ class QuantityContext extends antlr4.ParserRuleContext {
 
 class UnitContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_unit;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_unit;
+  }
 
-	dateTimePrecision() {
+  dateTimePrecision() {
 	    return this.getTypedRuleContext(DateTimePrecisionContext,0);
-	};
+  }
 
-	pluralDateTimePrecision() {
+  pluralDateTimePrecision() {
 	    return this.getTypedRuleContext(PluralDateTimePrecisionContext,0);
-	};
+  }
 
-	STRING() {
+  STRING() {
 	    return this.getToken(FHIRPathParser.STRING, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterUnit(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitUnit(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2485,30 +2485,30 @@ class UnitContext extends antlr4.ParserRuleContext {
 
 class DateTimePrecisionContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_dateTimePrecision;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_dateTimePrecision;
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterDateTimePrecision(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitDateTimePrecision(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2517,30 +2517,30 @@ class DateTimePrecisionContext extends antlr4.ParserRuleContext {
 
 class PluralDateTimePrecisionContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_pluralDateTimePrecision;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_pluralDateTimePrecision;
+  }
 
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterPluralDateTimePrecision(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitPluralDateTimePrecision(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2549,33 +2549,33 @@ class PluralDateTimePrecisionContext extends antlr4.ParserRuleContext {
 
 class TypeSpecifierContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_typeSpecifier;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_typeSpecifier;
+  }
 
-	qualifiedIdentifier() {
+  qualifiedIdentifier() {
 	    return this.getTypedRuleContext(QualifiedIdentifierContext,0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterTypeSpecifier(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitTypeSpecifier(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2584,19 +2584,19 @@ class TypeSpecifierContext extends antlr4.ParserRuleContext {
 
 class QualifiedIdentifierContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_qualifiedIdentifier;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_qualifiedIdentifier;
+  }
 
-	identifier = function(i) {
+  identifier = function(i) {
 	    if(i===undefined) {
 	        i = null;
 	    }
@@ -2605,19 +2605,19 @@ class QualifiedIdentifierContext extends antlr4.ParserRuleContext {
 	    } else {
 	        return this.getTypedRuleContext(IdentifierContext,i);
 	    }
-	};
+  };
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterQualifiedIdentifier(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitQualifiedIdentifier(this);
-		}
-	}
+    }
+  }
 
 
 }
@@ -2626,37 +2626,37 @@ class QualifiedIdentifierContext extends antlr4.ParserRuleContext {
 
 class IdentifierContext extends antlr4.ParserRuleContext {
 
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = FHIRPathParser.RULE_identifier;
+  constructor(parser, parent, invokingState) {
+    if(parent===undefined) {
+      parent = null;
     }
+    if(invokingState===undefined || invokingState===null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = FHIRPathParser.RULE_identifier;
+  }
 
-	IDENTIFIER() {
+  IDENTIFIER() {
 	    return this.getToken(FHIRPathParser.IDENTIFIER, 0);
-	};
+  }
 
-	DELIMITEDIDENTIFIER() {
+  DELIMITEDIDENTIFIER() {
 	    return this.getToken(FHIRPathParser.DELIMITEDIDENTIFIER, 0);
-	};
+  }
 
-	enterRule(listener) {
+  enterRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.enterIdentifier(this);
-		}
-	}
+    }
+  }
 
-	exitRule(listener) {
+  exitRule(listener) {
 	    if(listener instanceof FHIRPathListener ) {
 	        listener.exitIdentifier(this);
-		}
-	}
+    }
+  }
 
 
 }
