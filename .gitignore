@@ -1,4 +1,5 @@
-antlr-4.9.3-complete.jar
+antlr-*-complete.jar
+src/parser/antlr-*-complete.jar
 node_modules
 downloads
 src/scratch.js
