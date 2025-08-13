@@ -1,4 +1,5 @@
 const fhirpath = require('../src/fhirpath');
+const util = require('../src/utilities');
 
 describe('custom fn to square values', () => {
 
@@ -25,7 +26,7 @@ describe('custom fn to square values', () => {
   });
 
   it('Can apply custom fn with internal structures', () => {
-    const valData = fhirpath.util.valData;
+    const valData = util.valData;
 
     const options = {
       userInvocationTable: {

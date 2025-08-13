@@ -7,8 +7,8 @@ const _ = require("lodash");
 const emptyResource = {};
 const observationResource = require('./resources/r4/observation-example.json');
 const administrativeGenderVS = require('./resources/r4/administrative-gender-valueset.json');
-const observationCategoryVS = require('./resources/r4/observation-category-valuset.json');
-const {mockRestore, mockFetchResults} = require('./mock-fetch-results');
+const observationCategoryVS = require('./resources/r4/observation-category-valueset.json');
+const { mockRestore, mockFetchResults } = require('./mock-fetch-results');
 
 
 
@@ -601,7 +601,7 @@ describe('Async functions', () => {
 
     ['R4', 'R5'].forEach((modelName) => {
       it(
-        `should work with a \'code\' and URL passed as a string literal (${modelName})`,
+        `should work with a 'code' and URL passed as a string literal (${modelName})`,
         (done) => {
           const isR5 = modelName === 'R5';
           mockFetchResults([

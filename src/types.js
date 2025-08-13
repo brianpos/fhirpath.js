@@ -29,7 +29,7 @@ class FP_Type {
    *  Tests whether this object is equal to another.  Returns either true,
    *  false, or undefined (where in the FHIRPath specification empty would be
    *  returned).  The undefined return value indicates that the values were the
-   *  same to the shared precision, but that they had differnent levels of
+   *  same to the shared precision, but that they had different levels of
    *  precision.
    */
   equals(/* otherObj */) {
@@ -37,7 +37,7 @@ class FP_Type {
   }
 
   /**
-   *  Tests whether this object is equivalant to another.  Returns either true,
+   *  Tests whether this object is equivalent to another.  Returns either true,
    *  false, or undefined (where in the FHIRPath specification empty would be
    *  returned).
    */
@@ -617,7 +617,7 @@ class FP_TimeBase extends FP_Type {
    *  Tests whether this object is equal to another.  Returns either true,
    *  false, or undefined (where in the FHIRPath specification empty would be
    *  returned).  The undefined return value indicates that the values were the
-   *  same to the shared precision, but that they had differnent levels of
+   *  same to the shared precision, but that they had different levels of
    *  precision.
    * @param otherDateTime any sub-type of FP_TimeBase, but it should be the same
    *  as the type of "this".
@@ -680,7 +680,7 @@ class FP_TimeBase extends FP_Type {
 
 
   /**
-   *  Tests whether this object is equivalant to another.  Returns either true
+   *  Tests whether this object is equivalent to another.  Returns either true
    *  or false.
    */
   equivalentTo(otherDateTime) {
@@ -1126,7 +1126,7 @@ FP_Time._datePrecisionToTimeUnit = ["hour", "minute", "second", "millisecond"];
 /**
  *  Returns either the given number or a string with the number prefixed by
  *  zeros if the given number is less than the given length.
- * @param num the nubmer to format
+ * @param num the number to format
  * @param len the number of returned digits.  For now this must either be 2 or
  *  3. (Optional-- default is 2).
  */
@@ -1300,7 +1300,7 @@ FP_Instant.checkString = function(str) {
 class ResourceNode {
   /**
    *  Constructs a instance for the given node ("data") of a resource.  If the
-   *  data is the top-level node of a resouce, the path and type parameters will
+   *  data is the top-level node of a resource, the path and type parameters will
    *  be ignored in favor of the resource's resourceType field.
    * @param {*} data - the node's data or value (which might be an object with
    *  sub-nodes, an array, or FHIR data type)

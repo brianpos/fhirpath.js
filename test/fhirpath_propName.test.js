@@ -67,7 +67,8 @@ test("traceProcessingHasAccessToPropertyNames", () => {
   };
 
   let output = [];
-  let tracefunction = function (x, label) {
+  // eslint-disable-next-line no-unused-vars
+  let traceFunction = function (x, label) {
     if (Array.isArray(x)) {
       for (let item of x) {
         output.push(item);
@@ -79,7 +80,7 @@ test("traceProcessingHasAccessToPropertyNames", () => {
   };
 
   let options = {
-    traceFn: tracefunction,
+    traceFn: traceFunction,
     async: false,
   };
 
@@ -163,7 +164,7 @@ test("useContextFromExpressionResult", () => {
   output = []; // Reset output for the next expression
   result = fhirpath.evaluate(
     contextData, // Use the result of the first expression as context
-    "select("+expression+").trace('output_processing')",
+    "select(" + expression + ").trace('output_processing')",
     environment,
     fhirpath_r4_model,
     options
@@ -186,7 +187,8 @@ test("traceProcessingHasAccessToPrimitiveExtensionPropertyNames", () => {
   };
 
   let output = [];
-  let tracefunction = function (x, label) {
+  // eslint-disable-next-line no-unused-vars
+  let traceFunction = function (x, label) {
     if (Array.isArray(x)) {
       for (let item of x) {
         output.push(item);
@@ -198,7 +200,7 @@ test("traceProcessingHasAccessToPrimitiveExtensionPropertyNames", () => {
   };
 
   let options = {
-    traceFn: tracefunction,
+    traceFn: traceFunction,
     async: false,
   };
 
@@ -213,6 +215,7 @@ test("traceProcessingHasAccessToPrimitiveExtensionPropertyNames", () => {
   for (const element of output) {
     let node = element;
     if (node.fullPropertyName)
+      // eslint-disable-next-line no-console
       console.log(node.fullPropertyName(), JSON.stringify(node.convertData()));
   }
 

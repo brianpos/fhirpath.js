@@ -65,7 +65,7 @@ describe('compile', () => {
 
   it('should apply the FHIR model for a part of the resource placed in the context variable', () => {
     const getPartOfResource = fhirpath.compile(
-      "QuestionnaireResponse.item.where(linkId = \'2\')",
+      "QuestionnaireResponse.item.where(linkId = '2')",
       r4_model
     );
     const partOfResource = getPartOfResource(input.quantityExample);
@@ -181,17 +181,17 @@ describe('evaluate', () => {
   });
 
   it('should support providing a custom function to "trace"', () => {
-    var traceobj = null;
-    var tracelabel = null;
+    var traceObj = null;
+    var traceLabel = null;
     const result = fhirpath.evaluate(
       {},
-      "'stringdata'.trace('blah')",
+      "'string_data'.trace('blah')",
       null,
       null,
-      { traceFn: (data, label) => { tracelabel = label; traceobj = data;} });
-    expect(result).toStrictEqual(['stringdata']);
-    expect(tracelabel).toStrictEqual('blah');
-    expect(traceobj).toStrictEqual(['stringdata']);
+      { traceFn: (data, label) => { traceLabel = label; traceObj = data; } });
+    expect(result).toStrictEqual(['string_data']);
+    expect(traceLabel).toStrictEqual('blah');
+    expect(traceObj).toStrictEqual(['string_data']);
   });
 });
 
